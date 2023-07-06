@@ -1,6 +1,7 @@
-const mongoose = required('mongoose');
+const mongoose = require('mongoose');
+const Schema = mongoose.Schema;
 
-const UserSchema = new schema({
+const UserSchema = new Schema({
     name:{
         type: String,
         required: true
@@ -16,7 +17,7 @@ const UserSchema = new schema({
     },
     date:{
         type: Date,
-        required: Date.now
+        default: Date.now
     },
 });
 
